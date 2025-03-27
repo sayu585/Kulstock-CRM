@@ -1,27 +1,18 @@
+// Ensure the script is loaded
+console.log("script.js is loaded correctly");
+
+// Function to handle login
 function login() {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    if (!email || !password) {
-        alert("Please fill in all fields");
-        return;
-    }
-
-    console.log("Logging in with:", email, password);
-    alert("Login successful (Dummy function)");
+    console.log("Login function triggered");
+    // Add login logic here
 }
 
+// Function to handle registration
 function register() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("regEmail").value;
-    let password = document.getElementById("regPassword").value;
-    let role = document.getElementById("role").value;
-
-    if (!name || !email || !password) {
-        alert("Please fill in all fields");
-        return;
-    }
-
-    console.log("Registering:", name, email, password, role);
-    alert("Registration successful (Dummy function)");
+    console.log("Register function triggered");
+    // Add registration logic here
 }
+
+// Attach functions to global scope (optional, depending on how you're calling them)
+window.login = login;
+window.register = register;
