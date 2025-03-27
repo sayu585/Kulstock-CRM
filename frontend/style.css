@@ -1,9 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    margin: 20px;
 }
-input, button, select {
+
+input, select, button {
     display: block;
-    margin: 10px auto;
+    margin: 10px 0;
     padding: 10px;
+    width: 200px;
 }
