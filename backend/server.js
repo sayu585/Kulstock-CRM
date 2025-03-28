@@ -1,18 +1,17 @@
 const express = require("express");
 
 const app = express();
-const PORT = 5000;
 
+// Middleware
 app.use(express.json());
 
-// Authentication routes
-const authRoutes = require("./routes/auth");
-app.use("/api/auth", authRoutes);
-
+// Default route
 app.get("/", (req, res) => {
     res.send("Kulstock CRM Backend is Running...");
 });
 
-app.listen(PORT, () => {
+// Listen on port 5000 and allow access from anywhere
+const PORT = 5000;
+app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server is running on port ${PORT}`);
 });
